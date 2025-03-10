@@ -3,7 +3,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 public class Runner {
     OpenBrowser openBR = new OpenBrowser();
-//    Register cliclregister = new Register();
+    Register cliclregister = new Register();
     AccountServices tranfer =new AccountServices();
     AccountServices Request =  new AccountServices();
     AccountServices openaccount= new AccountServices();
@@ -14,10 +14,10 @@ public class Runner {
     public void setupBrowser() {
         openBR.setupBrowser();
     }
-//   @Test(priority = 1)
-//    public void setCliclregister(){
-//        cliclregister.register();
-//    }
+   @Test(priority = 1)
+    public void setCliclregister(){
+        cliclregister.register();
+    }
     @Test(priority = 1)
     public void setSetligin(){
 
