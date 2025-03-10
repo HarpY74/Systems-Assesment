@@ -1,5 +1,6 @@
 package Pages;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 public class Runner {
     OpenBrowser openBR = new OpenBrowser();
@@ -10,14 +11,11 @@ public class Runner {
     AccountServices logout = new AccountServices();
     LogIn setlogin =new LogIn();
 
-    @BeforeClass
+    @BeforeSuite
     public void setupBrowser() {
         openBR.setupBrowser();
     }
-   @Test(priority = 1)
-    public void setCliclregister(){
-        cliclregister.register();
-    }
+
     @Test(priority = 1)
     public void setSetligin(){
 
@@ -39,4 +37,8 @@ public class Runner {
     public void setlogout(){
         logout.Logout();
 }
+    @Test(priority = 6)
+    public void setCliclregister(){
+        cliclregister.register();
+    }
 }
